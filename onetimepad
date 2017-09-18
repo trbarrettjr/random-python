@@ -1,0 +1,76 @@
+#!/usr/bin/env python
+
+"""
+This program is a form of Bruce Schnier's Applied Cryptography, one-time pad
+crypto described on page 15.
+
+This is an expirament to see if it could be done.  Algorithm is as described
+in Bruce's book.
+"""
+
+def main():
+  print "Would you like to (e)ncrypt or (d)ecrypt? [E or D]"
+  selection = raw_input('> ')
+  selection = selection.upper()
+  if selection == 'D':
+    dec()
+  elif selection == 'E':
+    enc()
+  else:
+    print 'Error: Invalid Choice'
+    exit()
+
+def dec():
+  ourDict = setup()
+  privKey = raw_input('Private Key? > ')
+  message = raw_input('Message? > ')
+
+  privKey = privKey.upper()
+  message = message.upper()
+
+  if len(message) > len(privKey):
+    print "Error: Not enough characters in private key"
+    exit()
+
+  output = ''
+  for j in range(0,len(message)):
+    condOut = ourDict[message[j]] - ourDict[privKey[j]]
+    if condOut < 0:
+      condOut = condOut + 26
+    output = output + ourDict[condOut]
+
+  print output
+
+def enc():
+  ourDict = setup()
+  privKey = raw_input('Private Key? > ')
+  message = raw_input('Message? > ')
+
+  privKey = privKey.upper()
+  message = message.upper()
+
+  if len(message) > len(privKey):
+    print "Private Key Letters must be the same length of the message."
+    exit()
+
+  output = ''
+
+  for j in range(0,len(message)):
+    condOut = ourDict[message[j]] + ourDict[privKey[j]]
+    if condOut > 26:
+      condOut = condOut - 26
+    output = output + ourDict[condOut]
+
+  print output
+
+def setup():
+  alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  alphaConv = {}
+  for i in range(0,26):
+    alphaConv[alpha[i]] = i + 1
+    alphaConv[i + 1] = alpha[i]
+  return alphaConv
+
+
+if __name__ == '__main__':
+  main()
