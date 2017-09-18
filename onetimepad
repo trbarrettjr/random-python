@@ -1,17 +1,19 @@
 #!/usr/bin/env python
 
-"""
+'''
 This program is a form of Bruce Schnier's Applied Cryptography, one-time pad
 crypto described on page 15.
 
 This is an expirament to see if it could be done.  Algorithm is as described
 in Bruce's book.
-"""
+
+BE SMART:  Don't use to secure your stuff...
+'''
 
 def main():
   print "Would you like to (e)ncrypt or (d)ecrypt? [E or D]"
-  selection = raw_input('> ')
-  selection = selection.upper()
+  selection = raw_input('> ') # Get options
+  selection = selection.upper() # Make Upper Case
   if selection == 'D':
     dec()
   elif selection == 'E':
@@ -21,7 +23,7 @@ def main():
     exit()
 
 def dec():
-  ourDict = setup()
+  ourDict = setup() # enumerate the alphabet
   privKey = raw_input('Private Key? > ')
   message = raw_input('Message? > ')
 
@@ -35,14 +37,14 @@ def dec():
   output = ''
   for j in range(0,len(message)):
     condOut = ourDict[message[j]] - ourDict[privKey[j]]
-    if condOut < 0:
+    if condOut < 0: # This is modular 26, so cannot have negative numbers or zero.
       condOut = condOut + 26
     output = output + ourDict[condOut]
 
-  print output
+  print output # voila, plaintext
 
 def enc():
-  ourDict = setup()
+  ourDict = setup() # enumberate the alphabet
   privKey = raw_input('Private Key? > ')
   message = raw_input('Message? > ')
 
@@ -50,25 +52,25 @@ def enc():
   message = message.upper()
 
   if len(message) > len(privKey):
-    print "Private Key Letters must be the same length of the message."
+    print "Private Key Letters must be the same length of the message." # As described by Bruce
     exit()
 
   output = ''
 
   for j in range(0,len(message)):
     condOut = ourDict[message[j]] + ourDict[privKey[j]]
-    if condOut > 26:
+    if condOut > 26: # Modular 26, so cannot have numbers greater than 26
       condOut = condOut - 26
     output = output + ourDict[condOut]
 
-  print output
+  print output # voila, ciphertext
 
 def setup():
   alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
   alphaConv = {}
   for i in range(0,26):
-    alphaConv[alpha[i]] = i + 1
-    alphaConv[i + 1] = alpha[i]
+    alphaConv[alpha[i]] = i + 1 # Python starts at 0, so need to add 1 to make computer think
+    alphaConv[i + 1] = alpha[i] # as I think.  Just easier to work out on paper that way.
   return alphaConv
 
 
