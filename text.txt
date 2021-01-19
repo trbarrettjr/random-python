@@ -1,0 +1,1 @@
+This is a secret message in which I am going to encode with a poor encryption.  I am going to use xor and an easily guessible number.
