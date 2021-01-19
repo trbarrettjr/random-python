@@ -5,7 +5,7 @@ Random Python Applications that I have done.
 ## enc.py
 
 This is a simple xor script.  I was testing it for something, but decided not going to work with it.
-*This is not secure for encryption!  DO NOT USE!!!*
+**This is not secure for encryption!  DO NOT USE!!!**
 
 ### text.text
 Orignal text file that was used to XOR
