@@ -16,6 +16,7 @@ Encoded file from the text file after being XOR'd (if that is a word!)
 ## onetimepad
 
 Reading from Bruce Schnier's book and was talking about one time pads.  I tried my hand at making a one-time pad via python.  Meh...
+**This is probably not secure for encryption! DO NOT USE!!**. I know it is from Bruce Schnier, but...
 
 ## euclid.py
 
