@@ -38,13 +38,13 @@ This is of [The Collatz Conjecture](https://en.wikipedia.org/wiki/Collatz_conjec
 
 To use, I wrote the little program in the IDE.
 
-``import collatz
+```import collatz
 
 num = int(7) # Can be any positive integer.
 found = [] # Make an empty list
 
 while num > 1: # Do this or your sequence will forever be in a 4, 2, 1 loop!
     found.append(num)
-    num = collatz.evaluate(num)``
+    num = collatz.evaluate(num)```
 
 You can then type in the variable `found` in the IDE to get the list of the collatz conjecture!  **Not Solved** — Ask your local university mathmatician!
