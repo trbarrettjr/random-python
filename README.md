@@ -45,6 +45,7 @@ found = [] # Make an empty list
 
 while num > 1: # Do this or your sequence will forever be in a 4, 2, 1 loop!
     found.append(num)
-    num = collatz.evaluate(num)```
+    num = collatz.evaluate(num)
+```
 
 You can then type in the variable `found` in the IDE to get the list of the collatz conjecture!  **Not Solved** — Ask your local university mathmatician!
