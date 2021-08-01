@@ -38,7 +38,8 @@ This is of [The Collatz Conjecture](https://en.wikipedia.org/wiki/Collatz_conjec
 
 To use, I wrote the little program in the IDE.
 
-```import collatz
+```
+import collatz
 
 num = int(7) # Can be any positive integer.
 found = [] # Make an empty list
