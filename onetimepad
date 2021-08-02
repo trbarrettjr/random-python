@@ -4,8 +4,12 @@
 This program is a form of Bruce Schnier's Applied Cryptography, one-time pad
 crypto described on page 15.
 
-This is an expirament to see if it could be done.  Algorithm is as described
+This is an experiment to see if it could be done.  Algorithm is as described
 in Bruce's book.
+
+TO DO: Probably some looping on the Private Key so that you don't have to enter a long enough private key.  (I don't think that is what this is about though.
+TO DO: Update to Python3
+TO DO: Make a better menu system.
 
 BE SMART:  Don't use to secure your stuff...
 '''
