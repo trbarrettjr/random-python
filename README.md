@@ -24,6 +24,12 @@ Reading from Bruce Schnier's book and was talking about one time pads.  I tried 
 
 ---
 
+# Hash Themed Python
+## hash-test.py
+This file was testing to see if a file can be hashed and have the hash compared to the known hash.  The idea came from downloading software from the internet and unable to adequately compare the SHA256 hash to the known hash from the vendor.
+
+---
+
 # Math Themed Python
 
 These files are math problems that I try to solve or play with.  Nothing really to exciting.
