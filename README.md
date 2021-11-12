@@ -58,3 +58,17 @@ while num > 1: # Do this or your sequence will forever be in a 4, 2, 1 loop!
 ```
 
 You can then type in the variable `found` in the IDE to get the list of the collatz conjecture!  **Not Solved** — Ask your local university mathmatician!
+
+## ipfunc.py
+
+This is inspired by the MaxMind Database.  The database stores IPv4 addresses as integers for easy lookup and sorting.  I wrote this to tranpose IPv4 address numbers to integers and integers to IPv4 addresses.
+
+To use
+```python3
+import ipfunc
+
+# These functions will try to correct themselves to the proper input (str or int), however, they can return an error.
+
+a = ipfunc.ip_to_int('127.0.0.1') # Please note that the input to the function is a str
+b = ipfunc.int_to_ip(2130706433) # Please note that the input to the function is an int
+```
