@@ -34,6 +34,12 @@ This file was testing to see if a file can be hashed and have the hash compared 
 `./hash-test.py [filename] --sha1 [sha1 string]` or   
 `./hash-test.py [filename] --md5 [md5 string]`
 
+### To-do
+I would like to work the algorithm a little bit where you can pipe something in and give the known hash so that it compares.  For example:
+`curl [file from web] | ./hash-test.py --sha1 da39a3ee5e6b4b0d3255bfef95601890afd80709`
+
+Currently have an if statement in there where `if sys.argv > 1` then it would assume there is a filename there.  Thinking of conditional where `if sys.argv == 3` then it will assume a pipe is going to happen.  Work in progress.
+
 ---
 
 # Math Themed Python
