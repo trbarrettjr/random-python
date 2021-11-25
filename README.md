@@ -28,7 +28,11 @@ Reading from Bruce Schnier's book and was talking about one time pads.  I tried 
 ## hash-test.py
 This file was testing to see if a file can be hashed and have the hash compared to the known hash.  The idea came from downloading software from the internet and unable to adequately compare the SHA256 hash to the known hash from the vendor.
 
-`./hash-test.py [filename] [sha256 string]`
+`cat [filename] | ./hash-test` or
+`./hash-test.py < [file]` or
+`./hash-test.py [filename] --sha256 [sha256 string]` or
+`./hash-test.py [filename] --sha1 [sha1 string]` or
+`./hash-test.py [filename] --md5 [md5 string]`
 
 ---
 
