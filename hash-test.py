@@ -1,24 +1,59 @@
 #!/usr/bin/env python3
-import sys
 import hashlib
+import sys
 
-args = sys.argv[1:]
+def main():
+    '''I want to fix this section to where you don't always have to have a filename to put in
+    If you want to drop just the expected hashes like if you are going to curl something.'''
+    if len(sys.argv) > 1: # If you want to give the file name, we can read it
+        my_input = sys.argv[1]
+        with open(my_input, 'rb') as f:
+            my_input = f.read()
+    else: # Read from the STDIN so that you can pipe a file in.
+        my_input = sys.stdin.buffer.read()
+      
+    my_md5, my_sha1, my_sha256 = hash(my_input)
+    print(f'MD5:\t{my_md5}\nSHA1:\t{my_sha1}\nSHA256:\t{my_sha256}')
 
-if len(args) >= 2:
-    the_file = args[0]
-    known = args[1]
+    if '--md5' in sys.argv:
+        desHash = sys.argv.index('--md5') + 1
+        desHash = sys.argv[desHash]
+        if my_md5 == desHash:
+            print()
+            print('MD5 Hashes Matches')
+        else:
+            print()
+            print('*' * 27)
+            print('* MD5 Hash does not match *')
+            print('*' * 27)
+    elif '--sha1' in sys.argv:
+        desHash = sys.argv.index('--sha1') + 1
+        desHash = sys.argv[desHash]
+        if my_sha1 == desHash:
+            print()
+            print('SHA1 Hashes Matches')
+        else:
+            print()
+            print('*' * 28)
+            print('* SHA1 Hash does not match *')
+            print('*' * 28)
+    elif '--sha256' in sys.argv:
+        desHash = sys.argv.index('--sha256') + 1
+        desHash = sys.argv[desHash]
+        if my_sha256 == desHash:
+            print()
+            print('SHA256 Hashes Matches')
+        else:
+            print()
+            print('*' * 30)
+            print('* SHA256 Hash does not match *')
+            print('*' * 30)
 
-# print(sys.argv)
+def hash(myData):
+    a = hashlib.md5(myData).hexdigest()
+    b = hashlib.sha1(myData).hexdigest()
+    c = hashlib.sha256(myData).hexdigest()
+    return a, b, c
 
-f = open(the_file, 'rb')
-contents = f.read()
-the_hash = hashlib.sha256(contents).hexdigest()
-
-# contents = sys.stdin.buffer.read()
-
-print("MD5:\t", hashlib.md5(contents).hexdigest())
-print("SHA1:\t", hashlib.sha1(contents).hexdigest())
-print("SHA256:\t", hashlib.sha256(contents).hexdigest())
-
-if the_hash in known:
-    print("The hash matches!")
+if __name__ == '__main__':
+    main()
