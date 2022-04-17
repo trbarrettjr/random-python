@@ -22,10 +22,11 @@ def main():
             print()
             print('MD5 Hashes Matches')
         else:
+            warn = '* MD5 Hash does not match *'
             print()
-            print('*' * 27)
-            print('* MD5 Hash does not match *')
-            print('*' * 27)
+            print('*' * len(warn))
+            print(warn)
+            print('*' * len(warn))
     elif '--sha1' in sys.argv:
         desHash = sys.argv.index('--sha1') + 1
         desHash = sys.argv[desHash]
@@ -33,10 +34,11 @@ def main():
             print()
             print('SHA1 Hashes Matches')
         else:
+            warn = '* SHA1 Hash does not match *'
             print()
-            print('*' * 28)
-            print('* SHA1 Hash does not match *')
-            print('*' * 28)
+            print('*' * len(warn))
+            print(warn)
+            print('*' * len(warn))
     elif '--sha256' in sys.argv:
         desHash = sys.argv.index('--sha256') + 1
         desHash = sys.argv[desHash]
@@ -44,10 +46,11 @@ def main():
             print()
             print('SHA256 Hashes Matches')
         else:
+            warn = '# SHA256 Hash does not match #'
             print()
-            print('*' * 30)
-            print('* SHA256 Hash does not match *')
-            print('*' * 30)
+            print('#' * len(warn))
+            print(warn)
+            print('#' * len(warn))
 
 def hash(myData):
     a = hashlib.md5(myData).hexdigest()
