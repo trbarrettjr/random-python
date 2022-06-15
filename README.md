@@ -82,3 +82,18 @@ import ipfunc
 a = ipfunc.ip_to_int('127.0.0.1') # Please note that the input to the function is a str
 b = ipfunc.int_to_ip(2130706433) # Please note that the input to the function is an int
 ```
+
+---
+
+# Internet Python
+
+## google-domains.py
+
+This is a little home-brew application that you are able to update your Google Domains DynDNS through their API.
+
+To utilize update lines 5 and 6 with the data and the form will do the rest
+
+```python3
+credentials = (b'username', b'password') # Place username and Password from Google Domains
+hostname = b'sub.domain.tld' # Place domain name here from your google domains DynDNS
+```
