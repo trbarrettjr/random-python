@@ -101,3 +101,5 @@ hostname = b'sub.domain.tld' # Place domain name here from your google domains D
 ## pushover.py
 
 This will reach out and send a message using [pushover.net](https://www.pushover.net) service.  This can be modified to allow for each purpose and even made into a class function.
+
+**Warning**: Please note that saving credentials in the application is not secure, please utilize some safe method to securely store and recall your credentials as needed.
