@@ -100,4 +100,4 @@ hostname = b'sub.domain.tld' # Place domain name here from your google domains D
 
 ## pushover.py
 
-This will reach out and send a message using pushover.net(https://www.pushover.net) service.  This can be modified to allow for each purpose and even made into a class function.
+This will reach out and send a message using [pushover.net](https://www.pushover.net) service.  This can be modified to allow for each purpose and even made into a class function.
