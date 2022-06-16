@@ -89,14 +89,16 @@ b = ipfunc.int_to_ip(2130706433) # Please note that the input to the function is
 
 ## google-domains.py
 
-This is a little home-brew application that you are able to update your Google Domains DynDNS through their API.
+This is a little home-brew application that you are able to update your Google Domains DynDNS through their [API](https://support.google.com/domains/answer/6147083?hl=en#zippy=%2Cuse-the-api-to-update-your-dynamic-dns-record).
 
-To utilize update lines 5 and 6 with the data and the form will do the rest
+To utilize update lines 5 and 6 with the Username, Password, and domain and the program will do the rest.
 
 ```python3
 credentials = (b'username', b'password') # Place username and Password from Google Domains
 hostname = b'sub.domain.tld' # Place domain name here from your google domains DynDNS
 ```
+
+**Warning**: Please note that saving credentials in the application is not secure, please utilize some safe method to securely store and recall you credentials as needed.
 
 ## pushover.py
 
