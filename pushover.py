@@ -1,4 +1,5 @@
 import http.client, urllib.parse
+import json
 
 conn = http.client.HTTPSConnection('api.pushover.net')
 conn.request('POST', '/1/messages.json', 
@@ -6,10 +7,15 @@ conn.request('POST', '/1/messages.json',
         {
             "token": "application_token", 
             "user": "user_token", 
-            "message": "Hello" # Update this to your desired message
+            "message": "my message" # Update this to your desired message
         }
     ),
     {"Content-type": "application/x-www-form-urlencoded"}
 )
 
-print(conn.getresponse().read().decode())
+response = conn.getresponse().read().decode()
+response = json.loads(response)
+if response["status"] == 1:
+    print("Success: %s" % (response["request"]))
+else:
+    print("Error message didn't send see error: %s" % str(response))
