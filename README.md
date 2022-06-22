@@ -105,3 +105,9 @@ hostname = b'sub.domain.tld' # Place domain name here from your google domains D
 This will reach out and send a message using [pushover.net](https://www.pushover.net) service.  This can be modified to allow for each purpose and even made into a class function.
 
 **Warning**: Please note that saving credentials in the application is not secure, please utilize some safe method to securely store and recall your credentials as needed.
+
+## tailscale-api.py
+
+Playing with [Tailscale VPN](https://tailscale.com/) service.  They have an [API](https://github.com/tailscale/tailscale/blob/main/api.md) that you are able to utilize.  This is just calling the API and getting all the devices that are authorized for my account.  Adjust as you see fit.
+
+**Warning**: Please note that saving credentials in the application is not secure, please utilize some safe method to securely store and recall your credentials as needed.
