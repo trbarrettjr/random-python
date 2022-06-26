@@ -11,7 +11,7 @@ def main(): #This function will automattically fill-in the values and work for y
         {'hostname': hostname,}
     )
     headers = {"Content-Type": "application/x-www-form-urlencoded", 
-        "User-agent": "DynDNS for Google API/1.0.0", 
+        "User-agent": "DynDNS for Google API/1.0.0 email@domain.tld", # Be Cool and put your email address in there in case somebody needs to contact you.
         'Authorization': 'Basic %s' % encoded}
     conn = http.client.HTTPSConnection('domains.google.com') # Google Domains 
     conn.request('POST', '/nic/update', message, headers) # Watch API documentation for the change
