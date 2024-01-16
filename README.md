@@ -98,7 +98,9 @@ credentials = (b'username', b'password') # Place username and Password from Goog
 hostname = b'sub.domain.tld' # Place domain name here from your google domains DynDNS
 ```
 
-**Warning**: Please note that saving credentials in the application is not secure, please utilize some safe method to securely store and recall you credentials as needed.
+**Warning**: Please note that saving credentials in the application is not secure; please utilize some safe method to securely store and recall you credentials as needed.
+
+**SAD** 😢 Google decided to shutdown its domain business.  So do with this what you will.
 
 ## pushover.py
 
@@ -111,3 +113,9 @@ This will reach out and send a message using [pushover.net](https://www.pushover
 Playing with [Tailscale VPN](https://tailscale.com/) service.  They have an [API](https://github.com/tailscale/tailscale/blob/main/api.md) that you are able to utilize.  This is just calling the API and getting all the devices that are authorized for my account.  Adjust as you see fit.
 
 **Warning**: Please note that saving credentials in the application is not secure, please utilize some safe method to securely store and recall your credentials as needed.
+
+## ts-exit.py
+
+While using [Tailscale's](https://tailscale.com) [exit nodes](https://tailscale.com/kb/1103/exit-nodes), I like to enable and disable the dns settings while enabling and disabling the exit nodes.
+
+So this is a Python script of it taking in the information and connecting and disconnecting to how I like it.  I may update this into the future to including doing and ip check on a website that will return your ip address before and after connection.
