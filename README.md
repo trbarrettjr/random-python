@@ -46,6 +46,10 @@ Currently have an if statement in there where `if sys.argv > 1` then it would as
 
 These files are math problems that I try to solve or play with.  Nothing really to exciting.
 
+## declination.py
+
+Working on the sun declination calculator.  This is to calculate the sun's location relative to the earth.  Will need to add more code to calculate the declination relative to latitude.
+
 ## euclid.py
 
 I was helping my daughter with her math homework and was having trouble with reducing fractions.  I went through her homework and did my best to explain how euclid's algoritm worked and then wrote this little program to help display how to find the **greatest common factor**.
