@@ -96,7 +96,7 @@ b = ipfunc.int_to_ip(2130706433) # Please note that the input to the function is
 This is a little whois search for all the IP addresses that an ASN has assigned.  This will then print out a list of ip addresses in CIDR notation and then it can be copied and pasted into your firewall.
 
 ```bash
-python3 asn-search AS13335
+python3 asn-search.py AS13335
 ```
 
 ## google-domains.py
