@@ -91,6 +91,14 @@ b = ipfunc.int_to_ip(2130706433) # Please note that the input to the function is
 
 # Internet Python
 
+## asn-search.py
+
+This is a little whois search for all the IP addresses that an ASN has assigned.  This will then print out a list of ip addresses in CIDR notation and then it can be copied and pasted into your firewall.
+
+```bash
+python3 asn-search AS13335
+```
+
 ## google-domains.py
 
 This is a little home-brew application that you are able to update your Google Domains DynDNS through their [API](https://support.google.com/domains/answer/6147083?hl=en#zippy=%2Cuse-the-api-to-update-your-dynamic-dns-record).
