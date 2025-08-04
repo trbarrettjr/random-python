@@ -117,11 +117,14 @@ rpki-ov-state:  valid
 And convert this data over to JSON data.  Then you can run a python csv.DictWriter() to convert the data to a CSV file.  Or if you are going to use this on the web, the JSON will work great.
 
 Usage:
+
 ```bash
 python3 data-convert.py AS13335.txt
 ```
 
-This script will automatically conver AS13335.txt to AS13335.json
+This script will automatically convert the filenames from AS13335.txt to AS13335.json
+
+**Notes**: This should be able to be utilized on any data, I didn't just format it to RADB.  So if you have any data that is like the above described it should convert.
 
 ## google-domains.py
 
