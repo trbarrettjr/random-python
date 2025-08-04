@@ -99,6 +99,30 @@ This is a little whois search for all the IP addresses that an ASN has assigned.
 python3 asn-search.py AS13335
 ```
 
+## data-convert.py
+
+This little guy is to convert data that is in tabular format, such as:
+
+```
+route:          1.0.0.0/24
+descr:          QRATOR via EMIX
+origin:         AS13335
+mnt-by:         MAINT-AS8966
+changed:        noc@emix.net.ae 20230803
+source:         RADB
+last-modified:  2023-11-13T16:17:56Z
+rpki-ov-state:  valid
+```
+
+And convert this data over to JSON data.  Then you can run a python csv.DictWriter() to convert the data to a CSV file.  Or if you are going to use this on the web, the JSON will work great.
+
+Usage:
+```bash
+python3 data-convert.py AS13335.txt
+```
+
+This script will automatically conver AS13335.txt to AS13335.json
+
 ## google-domains.py
 
 This is a little home-brew application that you are able to update your Google Domains DynDNS through their [API](https://support.google.com/domains/answer/6147083?hl=en#zippy=%2Cuse-the-api-to-update-your-dynamic-dns-record).
