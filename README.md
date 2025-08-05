@@ -99,7 +99,7 @@ This is a little whois search for all the IP addresses that an ASN has assigned.
 python3 asn-search.py AS13335
 ```
 
-## data-convert.py
+## data-converter.py
 
 This little guy is to convert data that is in tabular format, such as:
 
@@ -119,7 +119,7 @@ And convert this data over to JSON data.  Then you can run a python csv.DictWrit
 Usage:
 
 ```bash
-python3 data-convert.py AS13335.txt
+python3 data-converter.py AS13335.txt
 ```
 
 This script will automatically convert the filenames from AS13335.txt to AS13335.json
