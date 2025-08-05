@@ -2,8 +2,6 @@
 import sys
 import json
 
-"""The puropse of this is to convert data that is in vertical tabular format and convert it to a JSON format.  With the json format you can then use the csv.DictWriter to make a table that way."""
-    
 def convert(text):
     text = text.strip()
     blocks  = text.split('\n\n')
@@ -15,7 +13,10 @@ def convert(text):
         for item in line:
             if ":" in item:
                 key, value = item.split(':', 1)
-                entry[key.strip()] = value.strip()
+                if key not in entry:
+                    entry[key.strip()] = value.strip()
+                else:
+                    entry[key] = entry[key] + ', ' + value.strip()
             else:
                 value = item.strip()
                 entry[key.strip()] =  entry[key] + ', ' + value.strip()
