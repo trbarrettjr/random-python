@@ -9,17 +9,15 @@ def convert(text):
     for block in blocks:
         entry = {}
         key = None
-        line = block.split('\n')
-        for item in line:
-            if ":" in item:
-                key, value = item.split(':', 1)
+        for line in block.split('\n'):
+            if ":" in line:
+                key, value = line.split(':', 1)
                 if key not in entry:
-                    entry[key.strip()] = value.strip()
+                    entry[key.strip()] = value.lstrip()
                 else:
-                    entry[key] = entry[key] + ', ' + value.strip()
+                    entry[key] += ' ' + value.lstrip()
             else:
-                value = item.strip()
-                entry[key.strip()] =  entry[key] + ', ' + value.strip()
+                entry[key.strip()] += f" {line.lstrip()}"
 
         entries.append(entry)
 
