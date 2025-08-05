@@ -22,7 +22,9 @@ def convert(text):
                     entry[key].append(value.strip())
             else:
                 value = item.strip()
-                entry[key.strip()] =  entry[key] + ', ' + value.strip()
+                if not isinstance(entry[key], list):
+                    entry[key] = [entry[key]]
+                entry[key.strip()].append(value)
 
         entries.append(entry)
 
