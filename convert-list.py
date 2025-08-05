@@ -9,8 +9,7 @@ def convert(text):
     for block in blocks:
         entry = {}
         key = None
-        line = block.split('\n')
-        for item in line:
+        for item in block.split('\n'):
             if ":" in item:
                 key, value = item.split(':', 1)
                 if key not in entry:
@@ -18,6 +17,8 @@ def convert(text):
                 else:
                     if not isinstance(entry[key], list):
                         entry[key] = [entry[key]]
+                    if value == '':
+                        continue
                     entry[key].append(value.strip())
             else:
                 value = item.strip()
