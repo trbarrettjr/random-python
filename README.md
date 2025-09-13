@@ -40,6 +40,13 @@ I would like to work the algorithm a little bit where you can pipe something in 
 
 Currently have an if statement in there where `if sys.argv > 1` then it would assume there is a filename there.  Thinking of conditional where `if sys.argv == 3` then it will assume a pipe is going to happen.  Work in progress.
 
+## dir-contents.py
+This was a little thought expirament that I had.  Could I get the multiple hashes of the files in a directory and use it for various purposes?  So this is the result.
+Run this in the directory you want.  And it will create 'contents.json' with the filename, md5, sha1, and sha256.
+
+### To-do
+Add a argv to where you can change the directory to get the files and then put the 'contents.json' file in the working directory that bash is in.
+
 ---
 
 # Math Themed Python
