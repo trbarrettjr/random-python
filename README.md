@@ -80,6 +80,20 @@ while num > 1: # Do this or your sequence will forever be in a 4, 2, 1 loop!
 
 You can then type in the variable `found` in the IDE to get the list of the collatz conjecture!  **Not Solved** — Ask your local university mathmatician!
 
+## rock-paper-scissors.py
+
+I got to thinking about randomness and was doing a little expirament with the computer.
+
+So I created this little script to add to a list ["rock", "paper", "scissors"] and then a looped through that list a various number of times.
+
+I wrote those outputs to rps.txt and then counted them and use the Chi-Squared to make some tests.
+
+And I am happy to report that random.choice is a good candidate of randomness!
+
+---
+
+# Internet Python
+
 ## ipfunc.py
 
 This is inspired by the MaxMind Database.  The database stores IPv4 addresses as integers for easy lookup and sorting.  I wrote this to tranpose IPv4 address numbers to integers and integers to IPv4 addresses.
@@ -93,10 +107,6 @@ import ipfunc
 a = ipfunc.ip_to_int('127.0.0.1') # Please note that the input to the function is a str
 b = ipfunc.int_to_ip(2130706433) # Please note that the input to the function is an int
 ```
-
----
-
-# Internet Python
 
 ## asn-search.py
 
