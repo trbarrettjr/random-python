@@ -94,6 +94,10 @@ And I am happy to report that random.choice is a good candidate of randomness!
 
 # Internet Python
 
+## dmarc-report-viewer.py
+
+This is a quick way to get through the DMARC Reports.  I just needed a quick way to view the reports in English.  I may adjust this guy to make a CSV or JSON file.  I am not sure.
+
 ## ipfunc.py
 
 This is inspired by the MaxMind Database.  The database stores IPv4 addresses as integers for easy lookup and sorting.  I wrote this to tranpose IPv4 address numbers to integers and integers to IPv4 addresses.
