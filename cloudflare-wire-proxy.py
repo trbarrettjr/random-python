@@ -2,6 +2,8 @@
 import socket
 import requests
 
+# SPDX-License-Identifier: MIT
+
 CLOUDFLARE_DOH = "https://1.1.1.2/dns-query"
 
 def forward_to_doh(dns_query_bytes):
