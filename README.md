@@ -179,3 +179,11 @@ Playing with [Tailscale VPN](https://tailscale.com/) service.  They have an [API
 While using [Tailscale's](https://tailscale.com) [exit nodes](https://tailscale.com/kb/1103/exit-nodes), I like to enable and disable the dns settings while enabling and disabling the exit nodes.
 
 So this is a Python script of it taking in the information and connecting and disconnecting to how I like it.  I may update this into the future to including doing and ip check on a website that will return your ip address before and after connection.
+
+## cloudflare-wire-proxy.py
+
+Reading through the developer documents on [Cloudflare's website](https://developers.cloudflare.com/), I came across their documentation on [DoH](https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/).  This was something a little interesting to me, so I decided to see if I could use python and create a DNS proxy using `sockets` and `requests`.
+
+Not to call it too easy... But 😌
+
+Fun little how-to, I really enjoyed this one.  I learned a lot about DoH and DoT.  Because that is what it is all about... Learning! 👨‍🏫
